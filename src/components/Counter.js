@@ -56,12 +56,12 @@ const Counter = () => {
 //     return (
 //       <main className={classes.counter}>
 //         <h1>Redux Counter</h1>
-//         <div className={classes.value}>{this.props.counter}</div>
+//         {this.props.show && <div className={classes.value}>{this.props.counter}</div>}
 //         <div>
 //           <button onClick={this.incrementHandler.bind(this)}>Increment</button>
 //           <button onClick={this.decrementHandler.bind(this)}>Decrement</button>
 //         </div>
-//         <button onClick={this.toggleCounterHandler}>Toggle Counter</button>
+//         <button onClick={this.toggleCounterHandler.bind(this)}>Toggle Counter</button>
 //       </main>
 //     );
 //   }
@@ -70,7 +70,7 @@ const Counter = () => {
 // const mapStateToProps = (state) => {
 //   return {
 //     counter: state.counter,
-//     showCounter: state.showCounter,
+//     show: state.showCounter,
 //   };
 // };
 
